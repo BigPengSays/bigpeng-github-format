@@ -24,7 +24,7 @@
 
 | 字段 | 信息源 |
 |------|--------|
-| `ORIGINAL_H1` | SKILL.md name / 用户指定 / package.json / repo 名 |
+| `ORIGINAL_H1` | **有 README**：原 `#` 原样保留。**无 README**：对话 → SKILL description → package → About → repo 名（见 title-design.md） |
 | `TAGLINE` | SKILL.md description / package description |
 | `CAPABILITIES` | SKILL.md 正文、scripts/、references/ |
 | `USAGE_HINTS` | examples/prompts.md、SKILL 工作流 |
@@ -59,7 +59,9 @@
 
 ## 字段优先级
 
-原 H1 → 用户指定 → SKILL.md / package name → repo 名
+**有 README**：原 H1 原样保留  
+
+**无 README**：用户对话 → SKILL.md description → package description → GitHub About → repo 名
 
 ## 冲突
 

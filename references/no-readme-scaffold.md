@@ -39,7 +39,7 @@
 
 | 版块 | 信息源（按优先级） |
 |------|-------------------|
-| **H1** | `SKILL.md` frontmatter name / 用户指定 / `package.json` name / repo 名 |
+| **H1** | `SKILL.md` description 提炼 / 用户对话 / `package.json` description / repo 名（最后）；见 [title-design.md](title-design.md) |
 | **Tagline** | `SKILL.md` description 首句 / package description / repo About |
 | **Why** | `SKILL.md` 首段、description、解决的问题；补痛点与「不做什么」 |
 | **Features** | `SKILL.md` 能力列表、scripts/、references/、核心 API |

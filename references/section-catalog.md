@@ -1,6 +1,6 @@
-# README 版块目录（基于 book-to-skill）
+# README 版块目录
 
-原则：**排版学 book-to-skill**；**Why 必选**；**有 README → 尽量沿用原有版块**；**无 README → 经典版块全部生成**；节名可对齐 Why / Usage / Install / FAQ / Examples。
+原则：**分层排版**；**Why 必选**；**有 README → 尽量沿用原文（含 H1）**；**无 README → 推断标题 + 生成经典全套**。
 
 ---
 
@@ -25,7 +25,7 @@
 
 | 顺序 | 版块 | 规则 |
 |------|------|------|
-| 1 | 居中 **H1** | 用原 README 标题，禁止换 repo 名 |
+| 1 | 居中 **H1** | **有 README**：原 `#` 原样保留。**无 README**：见 [title-design.md](title-design.md) |
 | 2 | **Tagline** | 原首段提炼，Hero 居中 |
 | 3 | **徽章行** | 至少 License；升级 `for-the-badge` |
 | 4 | **Hero 导航** | 第二步验证通过后写入；**Why 必进导航** |

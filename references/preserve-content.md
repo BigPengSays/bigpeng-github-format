@@ -29,7 +29,7 @@
 
 - 用 repo 名替换 H1 产品名  
 - 删除原文表格、边界说明、安装命令  
-- 为凑模板写 book-to-skill 英文套话  
+- 为凑模板写生硬英文套话  
 - 仅 `<details>` 代替应有 `##` 且该节进 Hero 导航  
 - 把边界 bullet **原样**粘贴进 FAQ 而不改问答体  
 
@@ -49,9 +49,16 @@
 7. 逐节润色（[content-polish.md](content-polish.md)）  
 8. 写 Hero 导航 HTML  
 
-## 标题优先级
+## 标题（H1）
 
-原 H1 → 用户指定 → package name → repo 名（最后）
+| 模式 | 规则 |
+|------|------|
+| **有 README** | 原 `#` / `<h1>` **原样保留**，仅改居中；详见 [title-design.md](title-design.md) |
+| **无 README** | 从对话 + 仓库内容推断自然语言标题；**禁止**裸 repo slug |
+
+## 标题优先级（无 README）
+
+用户对话 → SKILL.md description → package description → GitHub About → repo 名（最后）
 
 ## 自检
 

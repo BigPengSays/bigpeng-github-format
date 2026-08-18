@@ -1,13 +1,13 @@
-<h1 align="center"> GitHub README 格式化 Skill</h1>
+<h1 align="center">GitHub README 排版 Skill</h1>
 
 <p align="center">
-  <strong>把 GitHub 仓库 README 整理成 book-to-skill 式首页——居中 Hero、可点击导航、分层结构。</strong>
+  <strong>有原文就保留，没原文就从仓库里总结——排成分层首页，Hero 能点、结构能扫。</strong>
 </p>
 
 <p align="center">
   <a href="./SKILL.md"><img src="https://img.shields.io/badge/skill-bigpeng--github--format-E23D2D?style=for-the-badge" alt="skill"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="MIT"></a>
-  <a href="https://github.com/virgiliojr94/book-to-skill"><img src="https://img.shields.io/badge/style-book--to--skill-blueviolet?style=for-the-badge" alt="book-to-skill"></a>
+  <img src="https://img.shields.io/badge/for-GitHub%20README-24292f?style=for-the-badge" alt="GitHub README">
 </p>
 
 <p align="center">
@@ -24,33 +24,28 @@
 
 ## 🤔 为什么
 
-GitHub 首页是仓库的「门面」，但不少 README 信息齐全、排版却难扫：标题不居中、导航点不动、长表格堆在首屏、该折叠的内容没有折叠。
+仓库 README 往往信息齐全，却不好扫：标题贴边、导航点不动、长表格占满首屏、该折叠的没折叠。
 
-本 skill 把任意仓库 README 整理成 [book-to-skill](https://github.com/virgiliojr94/book-to-skill) 式结构：**美化 ≠ 重写**——保留原标题、表格和命令，只补缺失结构、统一版块命名、让 Hero 导航每个链接都能跳转。有 README 时尽量沿用原有版块；没有 README 时，从 `SKILL.md`、目录树等推断并生成经典全套。
+本 skill 专做 GitHub 首页排版：**美化 ≠ 重写**。提供了原始 README，就尽量保留你的标题和各版块正文，只补 Why、规范节名、收进折叠；没有 README，就从对话和仓库内容总结合适标题，并生成经典全套版块。
 
 ---
 
 ## 功能
 
-核心工作流分**两步**，不可跳过、不可颠倒：
+排版产出：**居中 Hero**（标题 + 一句话 + 徽章 + 锚点导航）+ **分层正文**（Why / 功能 / 用法 / 安装 / FAQ 等）。
 
-| 步骤 | 做什么 |
+| 阶段 | 做什么 |
 |------|--------|
-| **第一步** | 规划版块 + Hero 超链接草案：定稿正文有哪些 `##`，列出导航核对表 |
-| **第二步** | 验证锚点 + 润色各节：每个 `#anchor` 可跳转；迁移后的内容通顺连贯 |
+| **判断模式** | 有 README → 尽量用原文；无 README → 推断标题 + 生成经典版块 |
+| **第一步** | 规划版块 + Hero 导航草案：定稿 `##` 列表，填锚点核对表 |
+| **第二步** | 验证每个链接可跳转；润色迁移后的各节；通过后写 Hero HTML |
+| **输出** | `README.md` + 对话「美化摘要」「待你补充」 |
 
-**有 README 时**
+**有 README**：H1 原样保留；原有 `##` 尽量沿用；Why 必选；Usage / Install / FAQ 有内容则保留。
 
-- 尽量沿用原有 `##`；节名可规范化（边界→常见问题、Getting Started→使用方法）
-- **Why 必选**；Usage / Install / FAQ 有内容则保留
-- 项目独有节（如公式表）保留原名
+**无 README**：生成 Why、功能、使用方法、安装、常见问题、仓库结构、License；从 SKILL / LICENSE / examples / 目录树推断，**禁止编造**。
 
-**无 README 时**
-
-- 生成经典全套：Why、功能、使用方法、安装、常见问题、仓库结构、License
-- 内容从仓库文件推断，**禁止编造**；缺口写进「待你补充」
-
-规则与参考文档见 [SKILL.md](./SKILL.md) 及 `references/` 目录。
+详细规则见 [SKILL.md](./SKILL.md)、[references/implementation-logic.md](references/implementation-logic.md)、[references/title-design.md](references/title-design.md)。
 
 ---
 
@@ -58,19 +53,19 @@ GitHub 首页是仓库的「门面」，但不少 README 信息齐全、排版�
 
 对 Agent 说「用 bigpeng-github-format」，并提供仓库 URL、本地路径或 README 内容。
 
-**美化远程仓库**
+**远程仓库**
 
 ```text
 用 bigpeng-github-format 美化 https://github.com/foo/bar
 ```
 
-**美化本地 README（保留原标题和章节）**
+**本地 README（保留原标题和章节）**
 
 ```text
 美化 README，保留原标题和章节，补 Why，导航要能跳转，各节内容要通顺
 ```
 
-Agent 会按 [SKILL.md](./SKILL.md) 执行两步流程，并在对话末尾输出「美化摘要」与「待你补充」。完整规则、导航设计与内容润色指南在 `references/`。
+Agent 按两步流程执行，对话末尾输出「美化摘要」与「待你补充」。
 
 ---
 
@@ -86,26 +81,26 @@ ln -sfn "$(pwd)" "${HOME}/.cursor/skills/bigpeng-github-format"
 
 ### Claude Code / Codex 等
 
-把本目录放到对应产品的 skills 路径，能读到 `SKILL.md` 即可。入口是 [SKILL.md](./SKILL.md)。
+把本目录放到对应产品的 skills 路径，能读到 `SKILL.md` 即可。
 
 ---
 
 ## 常见问题
 
 **会重写我的 README 吗？**  
-不会。核心原则是**美化 ≠ 重写**：H1 用原标题，表格、代码块、链接路径尽量保留；只改排版、补缺失节、收折叠。禁止用 repo 名替换产品名。
+不会。有原始 README 时，H1 和各版块正文尽量原样保留；只改排版、补缺失节、收折叠。
+
+**标题怎么定？**  
+有 README：用原来的 `#` 标题，仅居中。没有 README：从对话、SKILL.md、package 描述、仓库 About 等推断自然语言产品名，不用裸 repo slug。
 
 **为什么必须有 Why 节？**  
-Why 是 book-to-skill 式首页的叙事起点，Hero 导航也**必须含「为什么 / Why」**。原文没有时，从首段或简介拆出新建。
+Why 是分层首页的叙事起点，Hero 导航也必须含「为什么」。原文没有时，从首段或简介拆出新建。
 
-**Hero 导航点不动怎么办？**  
-每个 `#anchor` 必须对应文中一个真实的 `##` 标题；不能只有 `<details>` 而没有 `##`。skill 要求先定稿正文 `##`，验证锚点后再写 Hero HTML。
-
-**会自动加 Star History 吗？**  
-默认**不加**。需要时在对话「待你补充」里会给可粘贴片段；只有用户明确要求才写入 README。
+**导航点不动怎么办？**  
+每个 `#anchor` 必须对应一个真实的 `##` 标题；不能只有 `<details>` 而没有 `##`。先定稿正文，验证锚点后再写 Hero HTML。
 
 **没有 README 也能用吗？**  
-可以。会从 `SKILL.md`、`LICENSE`、`examples/`、`package.json` 等推断内容，生成 Why / 功能 / 用法 / 安装 / FAQ / 仓库结构等经典版块；写不出的信息不编造，列进「待你补充」。
+可以。会推断标题并生成经典全套版块；写不出的信息不编造，列进「待你补充」。
 
 ---
 
@@ -116,13 +111,15 @@ Why 是 book-to-skill 式首页的叙事起点，Hero 导航也**必须含「为
 
 ```text
 bigpeng-github-format/
-├── SKILL.md                 # skill 入口与工作流
+├── SKILL.md
 ├── README.md
 ├── LICENSE
 └── references/
-    ├── nav-design.md        # Hero 导航设计
-    ├── content-polish.md    # 各节润色要点
-    ├── preserve-content.md  # 保留原文规则
+    ├── implementation-logic.md
+    ├── title-design.md
+    ├── nav-design.md
+    ├── content-polish.md
+    ├── preserve-content.md
     ├── no-readme-scaffold.md
     ├── section-catalog.md
     ├── readme-template.md
