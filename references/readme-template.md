@@ -2,10 +2,10 @@
 
 **顺序**：第一步定全部 `##` + 导航草案 → 第二步验证锚点并润色各节 → 最后写 Hero 导航。
 
-**H1**：必须用原 README 标题。
+**H1**：有 README 用原文（无 emoji 则补）；无 README 推断文案 + emoji。各 `##` 从 [header-emoji.md](header-emoji.md) 选 emoji。
 
 ```markdown
-<h1 align="center">{{ORIGINAL_H1}}</h1>
+<h1 align="center">{{H1_EMOJI}} {{H1_TEXT}}</h1>
 
 <p align="center">
   <strong>{{TAGLINE}}</strong>
@@ -25,37 +25,37 @@
 
 ---
 
-## 🤔 {{WHY_TITLE}}
+## {{WHY_EMOJI}} {{WHY_TITLE}}
 
 {{WHY_BODY_POLISHED}}
 
 ---
 
-## {{FEATURES_TITLE_OR_ORIGINAL}}
+## {{FEATURES_EMOJI}} {{FEATURES_TITLE_OR_ORIGINAL}}
 
 {{FEATURES_BODY}}
 
 ---
 
-## {{USAGE_TITLE}}
+## {{USAGE_EMOJI}} {{USAGE_TITLE}}
 
 {{USAGE_BODY_POLISHED}}
 
 ---
 
-## {{INSTALL_TITLE}}
+## {{INSTALL_EMOJI}} {{INSTALL_TITLE}}
 
 {{INSTALL_BODY}}
 
 ---
 
-## {{FAQ_TITLE}}
+## {{FAQ_EMOJI}} {{FAQ_TITLE}}
 
 {{FAQ_BODY_AS_QA}}
 
 ---
 
-## {{STRUCTURE_TITLE}}
+## {{STRUCTURE_EMOJI}} {{STRUCTURE_TITLE}}
 
 <!-- 进导航时必须有本 ##；树可折叠在 details 内 -->
 <details>

@@ -2,7 +2,7 @@
 name: bigpeng-github-format
 description: >-
   将 GitHub 仓库 README 格式化为居中 Hero、徽章导航与分层文档结构。
-  保留原标题与正文，补必选 Why 节，Hero 导航锚点须可跳转，迁移版块需润色通顺。
+  保留原标题与正文，补必选 Why 节与 header emoji，Hero 导航锚点须可跳转，迁移版块需润色通顺。
   无 README 时生成全套经典版块（Why/Features/Usage/Install/FAQ 等）。
   用户提供仓库 URL、本地路径或 README.md，并要求格式化、美化时使用。
 ---
@@ -13,7 +13,7 @@ description: >-
 
 **核心原则：美化 ≠ 重写。** 有 README 时**尽量使用原文**（含 H1 与各版块）；无 README 时从上下文与仓库内容推断标题并生成经典全套。**Why 必选**；Hero 导航在正文 `##` 定稿后生成，**每个锚点必须可跳转**。
 
-完整决策流程见 [references/implementation-logic.md](references/implementation-logic.md)；标题规则见 [references/title-design.md](references/title-design.md)。
+完整决策流程见 [references/implementation-logic.md](references/implementation-logic.md)；标题规则见 [references/title-design.md](references/title-design.md)；**emoji 备选**见 [references/header-emoji.md](references/header-emoji.md)。
 
 ---
 
@@ -23,7 +23,7 @@ description: >-
 |------|--------|
 | **0. 判断模式** | 有 README → 尽量用原文；无 README → 推断标题 + 生成经典版块 |
 | **1. 信息采集** | 有 README：盘点 H1、`##`、正文；无 README：扫 SKILL / LICENSE / examples / 目录树 |
-| **2. 定 H1** | 有 README：**原标题原样保留**；无 README：对话 → SKILL → package → About → repo 名 |
+| **2. 定 H1** | 有 README：**原标题保留**（无 emoji 则按领域池补 1 个）；无 README：推断标题 + emoji |
 | **3. 第一步** | 规划版块 + Hero 导航草案 |
 | **4. 第二步** | 验证锚点 + 润色各节 → 写 Hero + README |
 | **5. 输出** | README.md + 对话「美化摘要」「待你补充」 |
@@ -44,7 +44,9 @@ description: >-
 2. **版块规划**（按输入模式分支）  
 
    **有 README**  
-   - **H1 原样保留**（仅改居中）；**尽量沿用原有版块与正文**  
+   - **H1**：原文保留；**无 leading emoji 时**从 [header-emoji.md](references/header-emoji.md) 领域池补 1 个  
+   - **各 `##`**：规范化节名时从对应槽位备选池**各选 1 个 emoji**（已有则保留；同 README 不重复）  
+   - **尽量沿用原有版块与正文**  
    - 节名尽量规范化：对齐 Why / Usage / Install / FAQ / Examples；项目独有节**保留原名**  
    - **必选**：Why（原文无从首段/简介拆出则新建）  
    - **有内容则保留**：Usage、Install、FAQ  
@@ -111,6 +113,7 @@ description: >-
 5. **Star History 默认不加**；片段放「待你补充」。
 6. **固定输出**：「美化摘要」+「待你补充」。
 7. **生成内容禁止出现 `book-to-skill`**（含链接、徽章、正文描述）；用「分层首页」「Hero + 导航 + 分层结构」等表述替代。
+8. **标题 emoji**：H1 与各 `##` 须带 1 个贴切 emoji；每槽位从 [header-emoji.md](references/header-emoji.md) 备选池选取，**轮换避免千篇一律**；License 不加。
 
 ## 示例触发
 

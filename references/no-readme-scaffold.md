@@ -19,8 +19,8 @@
 
 | 顺序 | 槽位 | 中文节名 | 英文节名 | 进 Hero 导航 |
 |------|------|----------|----------|--------------|
-| 1 | Why | `## 🤔 为什么` | `## 🤔 Why` | ✓ 必选 |
-| 2 | Features | `## 功能` | `## Features` | ✓ |
+| 1 | **Why** | `## {emoji} 为什么` | `## {emoji} Why` | ✓ 必选 |
+| 2 | **Features** | `## {emoji} 功能` | `## {emoji} Features` | ✓ |
 | 3 | Usage | `## 使用方法` | `## Usage` | ✓ |
 | 4 | Install | `## 安装` | `## Install` | ✓ |
 | 5 | FAQ | `## 常见问题` | `## FAQ` | ✓ |
@@ -39,7 +39,7 @@
 
 | 版块 | 信息源（按优先级） |
 |------|-------------------|
-| **H1** | `SKILL.md` description 提炼 / 用户对话 / `package.json` description / repo 名（最后）；见 [title-design.md](title-design.md) |
+| **H1** | 推断文案 + [header-emoji.md](header-emoji.md) 领域池 emoji |
 | **Tagline** | `SKILL.md` description 首句 / package description / repo About |
 | **Why** | `SKILL.md` 首段、description、解决的问题；补痛点与「不做什么」 |
 | **Features** | `SKILL.md` 能力列表、scripts/、references/、核心 API |

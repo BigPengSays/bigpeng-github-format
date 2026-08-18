@@ -27,12 +27,14 @@
 
 ---
 
-## 2. 确定 H1 与 Tagline
+## 2. 确定 H1、emoji 与 Tagline
 
-| 模式 | H1 | Tagline |
-|------|-----|---------|
-| **A 有 README** | **原 `#` / `<h1>` 原样保留**，仅居中 | 原首段提炼一句 |
-| **B 无 README** | 对话 → SKILL → package → About → repo 名（见 [title-design.md](title-design.md)） | 从 description / 定位总结一句 |
+| 模式 | H1 | emoji | Tagline |
+|------|-----|-------|---------|
+| **A 有 README** | 原 `#` / `<h1>` 文案保留 | 无 leading emoji 则从 [header-emoji.md](header-emoji.md) 领域池补 | 原首段提炼一句 |
+| **B 无 README** | 对话 → SKILL → package → About → repo 名 | 领域池选 1 个 | 从 description 总结一句 |
+
+各 `##` 从槽位备选池各选 1 个 emoji（已有则保留；同 README 不重复）。见 [title-design.md](title-design.md)。
 
 **铁律**：有 README 时不换标题；无 README 时不使用裸 repo slug 当 H1。
 

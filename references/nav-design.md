@@ -25,13 +25,15 @@
 
 | 槽位 | 英文节名 | 中文节名 | 导航标签（中） | 导航标签（英） | 是否必选 |
 |------|----------|----------|----------------|----------------|----------|
-| **Why** | `Why` | `为什么` | 为什么 | Why | **必选** |
-| Features | `Features` | `功能` / 保留原名 | 功能 / 短名 | Features | 有则进 |
-| Usage | `Usage` | `使用方法` | 用法 | Usage | 强烈建议 |
-| Install | `Install` | `安装` | 安装 | Install | 强烈建议 |
-| FAQ | `FAQ` | `常见问题` | FAQ | FAQ | 有则进 |
-| Examples | — | — | 示例 | Examples | 有 `examples/` 时可进（文件外链） |
-| Structure | `Repository structure` | `仓库结构` | 结构 | Structure | 可选；**进导航则必须有 `##`** |
+| **Why** | `Why` | `为什么` | 为什么 | Why | **必选** | 🤔 💡 🎯 ✨ 🧭 |
+| Features | `Features` | `功能` / 保留原名 | 功能 / 短名 | Features | 有则进 | ⚡ 🛠️ ✨ 📦 🎨 |
+| Usage | `Usage` | `使用方法` | 用法 | Usage | 强烈建议 | 🚀 📖 💻 ▶️ 🎮 |
+| Install | `Install` | `安装` | 安装 | Install | 强烈建议 | 📥 ⬇️ 🔧 ⚙️ 🧲 |
+| FAQ | `FAQ` | `常见问题` | FAQ | FAQ | 有则进 | ❓ 💬 🙋 🆘 📋 |
+| Examples | — | — | 示例 | Examples | 有 examples/ 时 | 💡 📝 🧪 |
+| Structure | `Repository structure` | `仓库结构` | 结构 | Structure | 可选 | 📁 🗂️ 📂 🗃️ |
+
+定稿节名后，从 [header-emoji.md](header-emoji.md) 为每节**选 1 个 emoji**（已有则保留；同 README 不重复）。
 
 **Why 必选**：有 README 时原文无独立 Why 节则从首段拆出；**无 README 时与其他经典节一并新建**。Hero tagline 可保留精简版，Why 节展开（见 [content-polish.md](content-polish.md)）。
 
