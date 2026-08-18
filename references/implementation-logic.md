@@ -16,57 +16,50 @@
 
 ---
 
-## 1. 信息采集
+## 1. 第一步：仓库分析 + 版块规划
 
-| 模式 | 采集什么 |
-|------|----------|
-| **A 有 README** | 原 H1、全部 `##`、首段、安装、边界/FAQ 素材、链接路径 |
-| **B 无 README** | 扫仓库：`SKILL.md`、`LICENSE`、`examples/`、`package.json`、目录树；读用户对话上下文 |
+| 子步 | 做什么 | 参考 |
+|------|--------|------|
+| 1.1 信息采集 | 有 README：盘点 H1、`##`、首段；无 README：扫仓库树 | [intake.md](intake.md) |
+| 1.2 仓库分析 | 类型、核心能力、读者、入口、版块提示 | [repo-analysis.md](repo-analysis.md) |
+| 1.3 版块规划 | 定 `##` 顺序；Why 必选；保留独有节 | [section-catalog.md](section-catalog.md)、[preserve-content.md](preserve-content.md)、[no-readme-scaffold.md](no-readme-scaffold.md) |
+| 1.4 导航草案 | `{标签 → ## → 预计 href}` 核对表 | [nav-design.md](nav-design.md) |
 
-详见 [intake.md](intake.md)。
-
----
-
-## 2. 确定 H1、emoji 与 Tagline
-
-| 模式 | H1 | emoji | Tagline |
-|------|-----|-------|---------|
-| **A 有 README** | 原 `#` / `<h1>` 文案保留 | 无 leading emoji 则从 [header-emoji.md](header-emoji.md) 领域池补 | 原首段提炼一句 |
-| **B 无 README** | 对话 → SKILL → package → About → repo 名 | 领域池选 1 个 | 从 description 总结一句 |
-
-各 `##` 从槽位备选池各选 1 个 emoji（已有则保留；同 README 不重复）。见 [title-design.md](title-design.md)。
-
-**铁律**：有 README 时不换标题；无 README 时不使用裸 repo slug 当 H1。
+**产出（不写 README）**：仓库画像、`##` 顺序、导航草案、`GAPS[]`。
 
 ---
 
-## 3. 第一步：规划版块 + Hero 导航草案
+## 2. 第二步：初版版块实现
 
-| 模式 | 版块策略 |
-|------|----------|
-| **A 有 README** | 尽量沿用原有 `##`；节名可规范化（Why / Usage / Install / FAQ）；**Why 必选**（缺则从首段拆） |
-| **B 无 README** | 经典全套：Why、功能、使用方法、安装、常见问题、仓库结构、License |
+| 模式 | 策略 |
+|------|------|
+| **A 有 README** | 迁移原文到规划槽位；H1 保留；补 Why |
+| **B 无 README** | 推断 H1；生成经典全套各节内容 |
 
-产出：
+共用规则见 [draft-implementation.md](draft-implementation.md)：
 
-1. 定稿 `##` 顺序  
-2. 导航草案表 `{标签 → ## 标题 → 预计 href}`  
+- H1 + tagline + emoji + 全部 `##` 正文  
+- **不写 Hero HTML**  
+- FAQ 可先 bullet；Install/Usage 可先无引导句  
 
-详见 [nav-design.md](nav-design.md)、[section-catalog.md](section-catalog.md)、[no-readme-scaffold.md](no-readme-scaffold.md)。
-
----
-
-## 4. 第二步：验证锚点 + 润色内容
-
-1. **锚点**：按定稿 `##` 重算 href；每个导航项必须有对应 `##`（外链除外）  
-2. **润色**：迁移/合并后的节要通顺；FAQ 改问答；Why 独立可读  
-3. **写 Hero**：验证通过后再输出 HTML 导航  
-
-详见 [content-polish.md](content-polish.md)。
+**产出**：`README.md` 初稿（无 Hero 导航块）。
 
 ---
 
-## 5. 输出 README + 对话摘要
+## 3. 第三步：润色 + 真人化 + Hero
+
+| 子步 | 做什么 | 参考 |
+|------|--------|------|
+| 3.1 连贯润色 | 节间衔接、Why 独立、去重复 | [content-polish.md](content-polish.md) |
+| 3.2 真人化 | 去 AI 腔、FAQ 问答体 | [humanize-content.md](humanize-content.md) |
+| 3.3 锚点验证 | 按定稿 `##` 重算 href | [nav-design.md](nav-design.md) |
+| 3.4 写 Hero | 验证通过后输出 HTML 导航 | [readme-template.md](readme-template.md) |
+
+**产出**：终版 `README.md`。
+
+---
+
+## 4. 输出 README + 对话摘要
 
 1. 完整 `README.md`（居中 Hero + 正文 `##`）
 2. 对话末尾固定输出「美化摘要」+「待你补充」（[followup-template.md](followup-template.md)）  
@@ -79,10 +72,23 @@
 ```text
 输入
   → 有 README？
-       是 → H1/正文尽量用原文 → 映射版块 → 补 Why
-       否 → 推断 H1 → 生成经典全套
-  → 第一步：定 ## + 导航草案
-  → 第二步：验证锚点 + 润色
-  → 写 Hero + README
+       是 → 模式 A：H1/正文尽量用原文
+       否 → 模式 B：推断 H1 + 经典全套
+  → 第一步：仓库分析 + 定 ## + 导航草案（不写文件）
+  → 第二步：初版 README（## 齐全，无 Hero）
+  → 第三步：润色 + 真人化 + 验证锚点 + 写 Hero
   → 美化摘要 + 待你补充
+```
+
+```mermaid
+flowchart TD
+  input[用户输入]
+  mode{有实质README?}
+  input --> mode
+  mode -->|是| step1A[第一步: 分析+规划]
+  mode -->|否| step1B[第一步: 分析+经典全套规划]
+  step1A --> step2[第二步: 初版##节无Hero]
+  step1B --> step2
+  step2 --> step3[第三步: 润色+真人化+Hero]
+  step3 --> out[终版README+摘要]
 ```

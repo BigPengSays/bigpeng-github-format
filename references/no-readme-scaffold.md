@@ -1,13 +1,13 @@
 # 无 README 时的经典版块脚手架
 
-用户**未提供 README**（空文件、只有标题、或只给仓库路径）时，第一步不是「保留原有版块」，而是**生成全套经典版块**。
+用户**未提供 README**（空文件、只有标题、或只给仓库路径）时，**第一步规划经典全套**，**第二步生成初版各节**。
 
 ## 两种输入模式
 
-| 模式 | 第一步策略 |
-|------|------------|
-| **有 README** | 尽量沿用原有 `##`；节名可规范化；缺的才补 |
-| **无 README** | **经典版块全部生成**；从仓库文件推断内容 |
+| 模式 | 第一步策略 | 第二步策略 |
+|------|------------|------------|
+| **有 README** | 尽量沿用原有 `##`；节名可规范化；缺的才补 | 迁移原文（[preserve-content.md](preserve-content.md)） |
+| **无 README** | **经典版块全部规划** | **从仓库推断生成各节**（[draft-implementation.md](draft-implementation.md)） |
 
 判断「无 README」：文件不存在、几乎为空、或只有 `# 项目名` 一行且无实质 `##` 节。
 
@@ -45,7 +45,7 @@
 | **Features** | `SKILL.md` 能力列表、scripts/、references/、核心 API |
 | **Usage** | `examples/prompts.md`、`SKILL.md` 工作流、可执行命令 |
 | **Install** | 现有安装方式（npm/pip/skill 软链）、clone 命令、依赖文件 |
-| **FAQ** | `SKILL.md` 硬规则/边界、常见限制；至少 3 条问答体 |
+| **FAQ** | `SKILL.md` 硬规则/边界、常见限制；至少 3 条（第二步可先粗写，第三步改问答） |
 | **Structure** | 实际目录树（`SKILL.md`、`references/`、`examples/` 等） |
 | **License** | `LICENSE` 文件；无文件则在「待你补充」说明，README 不写假许可证 |
 
@@ -82,7 +82,9 @@
 ## 无 README 时的第一步产出模板
 
 ```text
-输入模式：无 README → 生成经典全套
+输入模式：无 README → 规划经典全套
+
+仓库画像：（类型 / 能力 / 读者）
 
 最终 ## 顺序：
 1. ## 🤔 为什么
@@ -95,14 +97,19 @@
 
 导航草案：（见上表）
 
-信息缺口：（列出无法从仓库推断、需用户补充的项）
+信息缺口 GAPS[]：（列出无法从仓库推断、需用户补充的项）
 ```
 
 ---
 
 ## 第二步注意
 
-- 新生成各节仍须**通顺连贯**（见 [content-polish.md](content-polish.md)），不是 bullet 堆砌  
-- FAQ 一律**问答体**  
-- 锚点验证规则与「有 README」相同  
+- 按 [draft-implementation.md](draft-implementation.md) 写出初版各节  
+- **不写 Hero HTML**  
+- FAQ 可先粗问答或 bullet，**第三步**必须通顺 + 真人化（[content-polish.md](content-polish.md)、[humanize-content.md](humanize-content.md)）  
 - 无法在仓库中找到的信息 → README 用「见 SKILL.md / 待补充」类 honest 表述，详细清单进对话「待你补充」
+
+## 第三步注意
+
+- 锚点验证规则与「有 README」相同  
+- FAQ 一律**问答体**；删 AI 套话  

@@ -37,8 +37,9 @@
 | 阶段 | 做什么 |
 |------|--------|
 | **判断模式** | 有 README → 尽量用原文；无 README → 推断标题 + 生成经典版块 |
-| **第一步** | 规划版块 + Hero 导航草案；为 H1 / 各 `##` 选 emoji |
-| **第二步** | 验证每个链接可跳转；润色各节；通过后写 Hero HTML |
+| **第一步** | 分析仓库作用 + 规划版块 + Hero 导航草案（不写 README） |
+| **第二步** | 实现初版 `##` 节（H1 + tagline + 正文；无 Hero） |
+| **第三步** | 连贯润色 + 真人化 → 验证锚点 → 写 Hero HTML |
 | **输出** | `README.md` + 对话「美化摘要」「待你补充」 |
 
 **有 README**：H1 文案保留（无 emoji 则补）；原有 `##` 尽量沿用；Why 必选。
@@ -65,7 +66,7 @@
 美化 README，保留原标题和章节，补 Why，导航要能跳转，各节内容要通顺
 ```
 
-Agent 按两步流程执行，对话末尾输出「美化摘要」与「待你补充」。
+Agent 按三步流程执行，对话末尾输出「美化摘要」与「待你补充」。
 
 ---
 
@@ -106,8 +107,11 @@ bigpeng-github-format/
 ├── assets/author-wechat.png
 └── references/
     ├── implementation-logic.md
+    ├── repo-analysis.md          # 第一步：仓库分析
+    ├── draft-implementation.md   # 第二步：初版版块
+    ├── humanize-content.md       # 第三步：真人化
     ├── title-design.md
-    ├── header-emoji.md        # 各节 emoji 备选池
+    ├── header-emoji.md           # 各节 emoji 备选池
     ├── nav-design.md
     ├── content-polish.md
     ├── preserve-content.md

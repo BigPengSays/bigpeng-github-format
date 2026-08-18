@@ -1,13 +1,13 @@
 # 信息采集
 
-信息采集是**第一步**的前置动作。先判断**输入模式**，再采集。
+信息采集是**第一步**的前置动作。先判断**输入模式**，再采集；配合 [repo-analysis.md](repo-analysis.md) 完成仓库分析。
 
 ## 输入模式判断
 
 | 模式 | 条件 | 第一步策略 |
 |------|------|------------|
 | **有 README** | 文件存在且有实质 `##` 节或可用正文 | 以原文为权威，尽量沿用版块 |
-| **无 README** | 文件不存在、几乎为空、或仅一行标题 | **生成经典全套**，见 [no-readme-scaffold.md](no-readme-scaffold.md) |
+| **无 README** | 文件不存在、几乎为空、或仅一行标题 | **规划经典全套**，见 [no-readme-scaffold.md](no-readme-scaffold.md) |
 
 ## 有 README：原文盘点
 
@@ -18,7 +18,7 @@
 | `HAS_WHY` | 是否已有 Why/为什么/简介节 |
 | `PRIMARY_LANGUAGE` | 中文 / English |
 | `INTRO` | H1 下首段 → tagline + Why 素材 |
-| `BOUNDARY` | 边界/限制 bullet → 日后改 FAQ 问答 |
+| `BOUNDARY` | 边界/限制 bullet → 第二步可先迁入，第三步改 FAQ 问答 |
 
 ## 无 README：仓库推断
 
@@ -36,20 +36,34 @@
 
 ## 第一步产出
 
+**不写 README 文件**。对话内确认：
+
+1. **仓库画像**（[repo-analysis.md](repo-analysis.md)）：类型 / 能力 / 读者 / 推断依据  
+2. **定稿 `##` 顺序** + **导航草案** `{标签, 对应 ##, 预计 href}`  
+3. **`GAPS[]`**（无 README 或信息不足时）  
+
 **有 README**：映射标准槽 → 定稿 `##` → 导航草案  
 
 **无 README**：按 [no-readme-scaffold.md](no-readme-scaffold.md) 定经典全套 `##` → 导航草案 → 列出 `GAPS[]`
 
 共用核对：[nav-design.md](nav-design.md)
 
-1. Why **必选**（有 README 时缺则补；无 README 时新建）  
-2. 填导航草案 `{标签, 对应 ##, 预计 href}`  
+- Why **必选**（有 README 时缺则规划补；无 README 时规划新建）  
 
 ## 第二步产出
 
+见 [draft-implementation.md](draft-implementation.md)：
+
+1. `README.md` 初稿：H1 + tagline + badges + 全部 `##`  
+2. H1 / 各 `##` emoji 已分配  
+3. **无 Hero 导航 HTML**  
+
+## 第三步产出
+
 1. 按定稿 `##` **重算 href**，填验证核对表  
-2. 逐节润色（[content-polish.md](content-polish.md)）  
+2. 逐节连贯润色（[content-polish.md](content-polish.md)）+ 真人化（[humanize-content.md](humanize-content.md)）  
 3. 锚点全部通过后写 Hero HTML  
+4. 终版 `README.md` + 对话「美化摘要」「待你补充」  
 
 ## 输入源
 

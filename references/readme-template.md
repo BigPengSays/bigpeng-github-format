@@ -1,6 +1,6 @@
 # README 输出模板
 
-**顺序**：第一步定全部 `##` + 导航草案 → 第二步验证锚点并润色各节 → 最后写 Hero 导航。
+**顺序**：第一步定全部 `##` + 导航草案 → 第二步写初版 `##` 正文（无 Hero）→ 第三步润色 + 真人化 + 验证锚点 → 最后写 Hero 导航。
 
 **H1**：有 README 用原文（无 emoji 则补）；无 README 推断文案 + emoji。各 `##` 从 [header-emoji.md](header-emoji.md) 选 emoji。
 
@@ -13,7 +13,7 @@
 
 <p align="center">{{BADGE_ROW}}</p>
 
-<!-- 第二步验证通过后写入；Why 必选 -->
+<!-- 第三步验证通过后写入；Why 必选 -->
 <p align="center">
   <a href="#{{ANCHOR_WHY}}">{{NAV_WHY}}</a> ·
   <a href="#{{ANCHOR_FEATURES}}">{{NAV_FEATURES}}</a> ·

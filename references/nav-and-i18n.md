@@ -2,12 +2,13 @@
 
 Hero 导航的设计流程见 **[nav-design.md](nav-design.md)**（必读）。内容润色见 **[content-polish.md](content-polish.md)**。
 
-## 两步分工
+## 三步分工
 
 | 步骤 | 导航 | 内容 |
 |------|------|------|
-| **第一步** | 定 `##` + 填导航**草案** | 规划版块、映射节名 |
-| **第二步** | **验证 href** → 写 Hero HTML | 润色各节，确保通顺 |
+| **第一步** | 定 `##` + 填导航**草案** | 仓库分析、规划版块 |
+| **第二步** | **不写 Hero** | 初版 `##` 正文（[draft-implementation.md](draft-implementation.md)） |
+| **第三步** | **验证 href** → 写 Hero HTML | 连贯润色 + 真人化（[content-polish.md](content-polish.md)、[humanize-content.md](humanize-content.md)） |
 
 ## 语言规则
 

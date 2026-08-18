@@ -1,6 +1,9 @@
 # 保留原 README 内容
 
-美化是**换排版、补结构**，不是**重写文案、换 H1**。节名可对齐标准槽（Why / Usage / Install / FAQ），**正文与表格必须保留**；迁移后按 [content-polish.md](content-polish.md) **润色通顺**。
+美化是**换排版、补结构**，不是**重写文案、换 H1**。节名可对齐标准槽（Why / Usage / Install / FAQ），**正文与表格必须保留**。
+
+- **第二步**：按本文件迁移原文，写出初版各节（见 [draft-implementation.md](draft-implementation.md)）  
+- **第三步**：仅润色通顺与真人化，不覆盖事实（见 [content-polish.md](content-polish.md)、[humanize-content.md](humanize-content.md)）
 
 **无 README** 时不适用「保留原文」，改走 [no-readme-scaffold.md](no-readme-scaffold.md) 生成经典全套。
 
@@ -20,10 +23,10 @@
 |------|------|
 | **`##` 节名** | 对齐标准槽；**从 header-emoji 池为每节选 1 个 emoji**（已有则保留） |
 | **首段** | Hero tagline + 拆入 **Why** 节（Why 必选） |
-| **FAQ 体例** | 边界 bullet → 问答体（内容意思保留，表述润色） |
+| **FAQ 体例** | 边界 bullet → **第三步**改问答体（内容意思保留） |
 | **折叠** | 长表/目录树收进 `##` 节内的 `<details>` |
 | **节序** | Why 通常放 Hero 后第一节 |
-| **过渡句** | 迁移、合并后为通顺可改引导语（见 content-polish） |
+| **过渡句** | **第三步**迁移、合并后为通顺可改引导语 |
 
 ## 禁止
 
@@ -31,23 +34,28 @@
 - 删除原文表格、边界说明、安装命令  
 - 为凑模板写生硬英文套话  
 - 仅 `<details>` 代替应有 `##` 且该节进 Hero 导航  
-- 把边界 bullet **原样**粘贴进 FAQ 而不改问答体  
+- 终版 FAQ 仍保留边界 bullet 而不改问答体  
 
-## 处理流程（对应两步）
+## 处理流程（对应三步）
 
-**第一步**
+**第一步**（规划，不写 README）
 
 1. 盘点原文全部 `##`  
 2. 映射标准槽（见 [nav-design.md](nav-design.md)）  
-3. **补 Why**（无则新建）  
+3. **补 Why**（无则规划新建）  
 4. 保留 / 规范化节名，定稿 `##` 顺序  
 5. 填导航草案  
 
-**第二步**
+**第二步**（初版）
 
-6. 按定稿 `##` 验证锚点  
-7. 逐节润色（[content-polish.md](content-polish.md)）  
-8. 写 Hero 导航 HTML  
+6. 迁移原文到规划槽位，写 H1 + tagline + 各 `##`  
+7. **不写 Hero HTML**  
+
+**第三步**（终版）
+
+8. 逐节连贯润色 + 真人化  
+9. 按定稿 `##` 验证锚点  
+10. 写 Hero 导航 HTML  
 
 ## 标题（H1）
 
