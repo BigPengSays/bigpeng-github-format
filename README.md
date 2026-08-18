@@ -1,4 +1,4 @@
-<h1 align="center">BigPeng GitHub README 格式化 Skill</h1>
+<h1 align="center"> GitHub README 格式化 Skill</h1>
 
 <p align="center">
   <strong>把 GitHub 仓库 README 整理成 book-to-skill 式首页——居中 Hero、可点击导航、分层结构。</strong>
