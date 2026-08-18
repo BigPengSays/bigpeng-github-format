@@ -103,6 +103,7 @@ bigpeng-github-format/
 ├── SKILL.md
 ├── README.md
 ├── LICENSE
+├── assets/author-wechat.png
 └── references/
     ├── implementation-logic.md
     ├── title-design.md
@@ -125,3 +126,11 @@ bigpeng-github-format/
 ## License
 
 [MIT](./LICENSE) · 作者 [BigPeng](https://github.com/BigPengSays)
+
+---
+
+## 🙋 关于作者
+
+欢迎关注公众号「大鹏说AI」，获取更多 AI 干货：
+
+![大鹏说AI 公众号](./assets/author-wechat.png)
