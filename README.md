@@ -1,7 +1,7 @@
 <h1 align="center">📝 GitHub README 排版 Skill</h1>
 
 <p align="center">
-  <strong>一键生成和排版 Github README——基于专业的 ReadMe 模板制作的 Skill</strong>
+  <strong>一键生成和排版 README —— 基于专业的 ReadMe 模板制作的 Skill</strong>
 </p>
 
 <p align="center">
