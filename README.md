@@ -1,7 +1,7 @@
 <h1 align="center">📝 GitHub README 排版 Skill</h1>
 
 <p align="center">
-  <strong>有原文就保留，没原文就从仓库里总结——排成分层首页，Hero 能点、结构能扫。</strong>
+  <strong>一键生成和排版 Github README——基于专业的 ReadMe 模板制作的 Skill</strong>
 </p>
 
 <p align="center">
@@ -90,17 +90,6 @@ ln -sfn "$(pwd)" "${HOME}/.cursor/skills/bigpeng-github-format"
 **会重写我的 README 吗？**  
 不会。有原始 README 时，H1 和各版块正文尽量原样保留；只改排版、补缺失节、收折叠。
 
-**标题怎么定？**  
-有 README：用原来的 `#` 标题，仅居中；无 emoji 会补一个。没有 README：从对话、SKILL.md、package 等推断，并加领域 emoji。
-
-**为什么标题都有 emoji？**  
-每个 H1 / `##` 从 [header-emoji.md](references/header-emoji.md) 备选池选 1 个，同 README 不重复，轮换避免每份 README 都用 🤔🚀📥 同一套。
-
-**为什么必须有 Why 节？**  
-Why 是分层首页的叙事起点，Hero 导航也必须含「为什么」。原文没有时，从首段或简介拆出新建。
-
-**导航点不动怎么办？**  
-每个 `#anchor` 必须对应带 emoji 的**最终** `##` 标题；先定稿再重算 href，验证通过后再写 Hero HTML。
 
 ---
 
